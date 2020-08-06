@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Login Form Design</title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    
+<script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
+
+</head>
+
+<body>
+    <div class="loginbox">
+    <img src="img/man.png" class="man">
+     <h1>Admin Login</h1>
+        <form>
+        <p>Username</p>
+        <input id="username" type="text" name="" placeholder="Enter Username">
+        <p>Password</p>
+        <input id="password" type="password" name="" placeholder="Enter Password">
+            <input id="btn-login" type="submit" name="" value="Login">
+        </form>
+    </div>
+
+    
+
+
+    <script src="adminlogin.js"></script>
+    <script>
+        firebase.auth().onAuthStateChanged(function(firebaseUser){
+
+        if(firebaseUser) {
+            firebaseUser=window.location.href= "admin.html";
+        }
+        });
+    </script>
+    
+    </body>
+    
+
+</html>
