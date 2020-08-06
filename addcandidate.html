@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Add Candidate</title>
+	<link rel="stylesheet" href="addpartycss.css">
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".hamburger").click(function(){
+			   $(".wrapper").toggleClass("collapse");
+			});
+		});
+	</script>
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="top_navbar">
+    <div class="hamburger">
+       <div class="one"></div>
+       <div class="two"></div>
+       <div class="three"></div>
+    </div>
+    <div class="top_menu">
+      <div class="logo"><img src ="logo.png" width="150" height="50"></div>
+         <ul>
+             <h3>Add Candidate Details</h3></ul>
+      <ul>
+        <li><a href="#">
+          <i class="fas fa-bell"></i>
+          </a></li>
+        <li><a href="#">
+          <i class="fas fa-user"></i>
+          </a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="sidebar">
+      <ul>
+        <li><a href="admin.html">
+          <span class="icon"><i class="fas fa-home"></i></span>
+          <span class="title">Home</span></a></li>
+        <li><a href="addelection.html">
+          <span class="icon"><i class="fas fa-vote-yea"></i></span>
+          <span class="title">Add Election</span>
+          </a></li>
+        <li><a href="#">
+          <span class="icon"><i class="fas fa-fist-raised"></i></span>
+          <span class="title">Add Candidate</span>
+          </a></li>
+        <li><a href="addvoter.html" class="active">
+          <span class="icon"><i class="fas fa-person-booth"></i></span>
+          <span class="title">Add Voters</span>
+          </a></li>
+        <li><a href="addparty.html">
+          <span class="icon"><i class="fas fa-flag-checkered"></i></span>
+          <span class="title">Add Party</span>
+          </a></li>
+          <li><a href="#">
+          <span class="icon"><i class="fas fa-info-circle"></i></span>
+          <span class="title">Election Details</span>
+          </a></li>
+          <li><a href="#">
+          <span class="icon"><i class="fas fa-poll"></i></span>
+          <span class="title">Result Analysis</span>
+          </a></li>
+          <li><a href="#">
+          <span class="icon"><i class="fas fa-paste"></i></span>
+          <span class="title">Past Elections</span>
+          </a></li>
+    </ul>
+  </div>
+  
+  <div class="main_container">
+      <form id="contactForm">
+   <div class="row">
+          <div class="col-50">
+              <div class="alert alert-success success-message" style="display:none;">Form submitted successfully.</div>
+
+              <label for="exampleFullName">Candidate Name</label>
+              <input type="text" class="form-control candidatename" id="exampleCandidateName" placeholder="Enter Candidate Name" required>
+              <label for="exampleFullName">Party Name</label>
+              <input type="text" class="form-control partyname" id="examplePartyName" placeholder="Enter Party Name" required>
+              <label for="exampleFullName">About</label>
+              <input type="text" class="form-control about" id="exampleAbout" placeholder="Some Bio..." required>
+               <div class="row">
+              <div class="col-50">
+                  <label for="exampleFullName">Address</label>
+                  <input type="text" class="form-control address" id="exampleAddress" placeholder="Enter Address" required>
+              </div>
+              <div class="col-50">
+                  <label for="exampleFullName">District</label>
+                  <input type="text" class="form-control district" id="exampleDistrict" placeholder="Enter District" required>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-50">
+                  <label for="exampleFullName">State</label>
+                  <input type="text" class="form-control state" id="exampleState" placeholder="Enter State" required>
+              </div>
+              <div class="col-50">
+                  <label for="exampleFullName">Postal Code</label>
+                  <input type="text" class="form-control postal" id="examplePostal" placeholder="Enter Postal Code" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-50">
+              <label for="exampleFullName">Contact Number</label>
+              <input type="text" class="form-control contact" id="exampleContact" placeholder="Enter Contact Number" required>
+              <label for="exampleFullName">Email-Id</label>
+              <input type="text" class="form-control email" id="exampleEmail" placeholder="Enter Email-Id" required>
+            
+              
+               <div class="row">
+              <div class="col-50">
+                  <label for="exampleFullName">Age</label>
+                  <input type="text" class="form-control age" id="exampleAge" placeholder="Enter Candidate Age" required>
+              </div>
+              <div class="col-50">
+                  <label for="exampleFullName">Assets</label>
+                  <input type="text" class="form-control assets" id="exampleAssets" placeholder="Enter Assets Value" required>
+              </div>
+            </div>
+              <label for="symbol">Candidate Photo</label>
+              <input type="file" name = "pic" accept = "image/*" >
+              <label for="symbol">Party Symbol</label>
+              <input type="file" name = "pic" accept = "image/*" >
+          </div> 
+          
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+
+	<script src="addcandidate.js"></script>
+	
+</body>
+</html>
